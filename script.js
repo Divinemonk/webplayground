@@ -1,6 +1,8 @@
 console.log("script.js working!!");
 
-alert("Working!");
+let fn = prompt("Enter file name:");
+console.log(fn)
 
-let text = prompt("Enter some text");
-console.log(text)
+var fs = require('fs');
+var htmlContent = 'Test File';
+fs.writeFile('./testfile.html', htmlContent, (error) => { console.log(error); });
