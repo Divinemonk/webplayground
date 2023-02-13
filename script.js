@@ -1,3 +1,6 @@
 console.log("script.js working!");
 
-console.log(prompt("Enter some text"));
+alert("Working!");
+
+let text = prompt("Enter some text");
+console.log(text)
