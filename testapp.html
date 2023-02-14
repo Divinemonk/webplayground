@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <title>testapp</title>
+</head>
+<body>
+
+    <script type="module">
+
+        function saveToFirebase(data) {
+            var dataObj = {
+                DATA: data
+            };
+
+            firebase.database().ref('subscription-entries').push().set(dataObj)
+                .then(function(snapshot) {
+                    success(); // some success method
+                }, function(error) {
+                    console.log('error' + error);
+                    error(); // some error method
+                });
+        }
+        
+        let testData = prompt("Enter somthing: ");
+        saveToFirebase(testData);
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "VVZWc05sbFdUalZSTVVwMlZXNWFUMVpYZUVwT01qbElWV3BDY0UxdGNFMU9NMDVUVlVac1MxVllXakJOTW1SaFdIcG9UZz09", // 64^5
+          authDomain: "test-app-80ed4.firebaseapp.com",
+          projectId: "test-app-80ed4",
+          storageBucket: "test-app-80ed4.appspot.com",
+          messagingSenderId: "281079406500",
+          appId: "1:281079406500:web:f610b2e55b6a0541b26b31",
+          measurementId: "G-F9XM3WHMD3"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // npm install -g firebase-tools
+      </script>
+      
+</body>
+</html>
