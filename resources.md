@@ -4,4 +4,5 @@
 - https://www.freecodecamp.org/news/github-discussions-as-chat-system/
 - https://phiresky.github.io/blog/2021/hosting-sqlite-databases-on-github-pages/
 - https://github.com/phiresky/world-development-indicators-sqlite/
-- 
+- https://medium.com/pan-labs/dynamic-web-apps-on-github-pages-for-free-ffac2b776d45
+
